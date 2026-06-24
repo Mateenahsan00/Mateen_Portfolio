@@ -11,6 +11,7 @@
   gtag('config', 'G-P2R61HRX0L');
 </script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="YOIP8YrMI9fGDaFRdxkUTUqib0SqGh9lcuSMXArTk8U" />  
      <title>Mateen Portfolio - IT Professional & Web Developer</title>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -501,6 +502,93 @@
                 width: 60px;
                 height: 60px;
                 font-size: 2.2rem;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            :root {
+                --section-padding: 70px 5%;
+            }
+            nav {
+                padding: 14px 5%;
+            }
+            .logo {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 120px 5% 70px;
+                min-height: auto;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+            .hero .subtitle {
+                font-size: clamp(0.95rem, 4vw, 1.15rem);
+            }
+            .hero .tagline {
+                font-size: clamp(0.9rem, 3.5vw, 1rem);
+                margin-bottom: 32px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+            }
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            .section-header {
+                margin-bottom: 40px;
+            }
+            .section-header h2 {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+            .section-header p {
+                font-size: 0.98rem;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .card {
+                padding: 24px;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            .skill-pill {
+                padding: 16px 12px;
+            }
+            .skill-pill .icon {
+                font-size: 2rem;
+            }
+            .skill-pill h4 {
+                font-size: 0.95rem;
+            }
+            .exp-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .cta-container h2 {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+            .cta-container p {
+                font-size: 0.98rem;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 54px;
+                height: 54px;
+                font-size: 2rem;
             }
         }
     </style>
