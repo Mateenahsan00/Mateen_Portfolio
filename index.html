@@ -317,10 +317,16 @@
             animation: gradientShift 6s ease infinite;
             background-size: 200% 200%;
             filter: drop-shadow(0 4px 20px rgba(6, 182, 212, 0.2));
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         @keyframes gradientShift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
+        }
+        .hero h1:hover {
+            transform: translateY(-5px) rotateX(5deg) scale(1.02);
+            filter: drop-shadow(0 8px 30px rgba(6, 182, 212, 0.4));
         }
         .hero .subtitle {
             font-size: clamp(1.1rem, 2.5vw, 1.6rem);
@@ -1036,7 +1042,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1 class="fade-in">MUHAMMAD MATEEN AHSAN</h1>
+                <h1 class="fade-in" style="text-align: center;">Muhammad Mateen Ahsan</h1>
                 <p class="subtitle fade-in delay-1">IT Manager | Web Developer | WordPress Developer | Digital Marketing Specialist</p>
                 <p class="tagline fade-in delay-2">
                     Results-driven IT professional with 2+ years of experience in Web Development, WordPress, Ecommerce, and Digital Marketing. I develop responsive websites, WooCommerce and Shopify stores, manage SEO, website maintenance, and digital marketing campaigns. Proficient in HTML, CSS, JavaScript, PHP, MySQL, Node.js, Express.js, and WordPress—focused on delivering secure, user-friendly, and business-oriented digital solutions.
