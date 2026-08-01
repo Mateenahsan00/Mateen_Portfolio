@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2R61HRX0L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P2R61HRX0L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YOIP8YrMI9fGDaFRdxkUTUqib0SqGh9lcuSMXArTk8U" />  
+     <title>Mateen Portfolio - IT Professional & Web Developer</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e293b 50%, #0f172a 75%, #020617 100%);
+            color: #f1f5f9;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        :root {
+            --primary-accent: #06b6d4;
+            --secondary-accent: #3b82f6;
+            --tertiary-accent: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            --accent-gradient-hover: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%);
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-bg-strong: rgba(30, 41, 59, 0.85);
+            --glass-border: rgba(148, 163, 184, 0.15);
+            --glass-border-hover: rgba(6, 182, 212, 0.4);
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --section-padding: 100px 5%;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.15);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated Background Orbs - 3D Depth Effect */
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat3D 20s ease-in-out infinite;
+        }
+        body::before {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, transparent 70%);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        body::after {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, transparent 70%);
+            bottom: -15%;
+            right: -10%;
+            animation-delay: -10s;
+        }
+        @keyframes orbFloat3D {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(40px, -30px) scale(1.08);
+            }
+            50% {
+                transform: translate(-20px, 50px) scale(0.95);
+            }
+            75% {
+                transform: translate(30px, 20px) scale(1.05);
+            }
+        }
+
+        /* Navbar WhatsApp Button */
+        .nav-whatsapp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--whatsapp-green);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .nav-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px) rotateX(8deg);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 68px;
+            height: 68px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: floatPulse3D 2.5s ease-in-out infinite, floatEntrance 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        @keyframes floatPulse3D {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+                transform: scale(1) translateY(0);
+            }
+            50% {
+                box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6);
+                transform: scale(1.08) translateY(-5px);
+            }
+        }
+        @keyframes floatEntrance {
+            from {
+                opacity: 0;
+                transform: scale(0.3) translateY(40px) rotate(-180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0) rotate(0);
+            }
+        }
+        .whatsapp-float:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.2) translateY(-6px) rotateX(12deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+            animation: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 5%;
+            background: rgba(2, 6, 23, 0.82);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.35s ease;
+        }
+        nav.scrolled {
+            padding: 14px 5%;
+            border-bottom-color: rgba(6, 182, 212, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            font-size: 1.85rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--accent-gradient);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        .burger div {
+            width: 28px;
+            height: 3px;
+            background: linear-gradient(90deg, #fff, #cbd5e1);
+            border-radius: 3px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .burger.toggle .line1 { transform: rotate(-45deg) translate(-6px, 8px); }
+        .burger.toggle .line2 { opacity: 0; transform: translateX(-20px); }
+        .burger.toggle .line3 { transform: rotate(45deg) translate(-6px, -8px); }
+
+        main { padding-top: 0; position: relative; z-index: 1; }
+        section { padding: var(--section-padding); position: relative; }
+
+        /* Hero Section with 3D Animations */
+        .hero {
+            padding: 190px 5% 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 95vh;
+            position: relative;
+            overflow: hidden;
+            perspective: 1200px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%);
+            top: -200px;
+            left: -200px;
+            pointer-events: none;
+            animation: heroOrb1 12s ease-in-out infinite;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            bottom: -150px;
+            right: -150px;
+            pointer-events: none;
+            animation: heroOrb2 15s ease-in-out infinite;
+        }
+        @keyframes heroOrb1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+        }
+        @keyframes heroOrb2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-50px, -30px) scale(1.08); }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1050px;
+            transform-style: preserve-3d;
+            animation: heroContentFloat 8s ease-in-out infinite;
+        }
+        @keyframes heroContentFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5.2rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 40%, #bae6fd 70%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            animation: gradientShift 6s ease infinite;
+            background-size: 200% 200%;
+            filter: drop-shadow(0 4px 20px rgba(6, 182, 212, 0.2));
+        }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 32px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+        .hero .tagline {
+            font-size: clamp(1rem, 1.8vw, 1.18rem);
+            color: var(--text-light);
+            max-width: 920px;
+            margin: 0 auto 52px;
+            line-height: 1.9;
+            opacity: 0.92;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            padding: 16px 40px;
+            border-radius: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn:hover::before { left: 100%; }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 8px 28px rgba(6, 182, 212, 0.4), 0 0 0 1px rgba(6, 182, 212, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-6px) rotateX(10deg) scale(1.03);
+            box-shadow: 0 16px 45px rgba(6, 182, 212, 0.55), 0 0 60px rgba(6, 182, 212, 0.25);
+            background: var(--accent-gradient-hover);
+        }
+        .btn-secondary {
+            background: rgba(30, 41, 59, 0.5);
+            color: #fff;
+            border: 1.5px solid rgba(148, 163, 184, 0.25);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: rgba(51, 65, 85, 0.6);
+            transform: translateY(-5px) rotateX(8deg) scale(1.02);
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 12px 35px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Generic Fade-in Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .fade-in.delay-1 { animation-delay: 0.15s; }
+        .fade-in.delay-2 { animation-delay: 0.3s; }
+        .fade-in.delay-3 { animation-delay: 0.45s; }
+        .fade-in.delay-4 { animation-delay: 0.6s; }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        .section-header h2 {
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-gradient);
+            margin: 22px auto 0;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Cards with 3D tilt effect */
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 34px;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            box-shadow: var(--shadow-card);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            perspective: 1200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px) rotateX(6deg) rotateY(-4deg) scale(1.015);
+            border-color: var(--glass-border-hover);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(6, 182, 212, 0.15);
+        }
+        .card:hover::before { opacity: 1; }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 32px;
+            max-width: 1350px;
+            margin: 0 auto;
+            perspective: 1500px;
+        }
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 4px 10px rgba(6, 182, 212, 0.3));
+            transform-origin: center;
+        }
+        .expertise-card:hover .expertise-icon {
+            transform: translateZ(30px) scale(1.15) rotate(-6deg);
+            filter: drop-shadow(0 8px 20px rgba(6, 182, 212, 0.5));
+        }
+        .expertise-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 14px;
+            color: #fff;
+            letter-spacing: -0.3px;
+            position: relative;
+            display: inline-block;
+        }
+        .expertise-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            transition: width 0.4s ease;
+        }
+        .expertise-card:hover h3::after { width: 80px; }
+        .expertise-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        .skills-preview {
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.04) 25%, rgba(139, 92, 246, 0.04) 75%, transparent 100%);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 22px;
+            max-width: 1300px;
+            margin: 0 auto;
+            perspective: 1200px;
+        }
+        .skill-pill {
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.06));
+            border: 1.5px solid rgba(6, 182, 212, 0.2);
+            padding: 24px 20px;
+            border-radius: 18px;
+            text-align: center;
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-pill::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .skill-pill > * { position: relative; z-index: 1; }
+        .skill-pill:hover {
+            transform: translateY(-8px) rotateX(12deg) scale(1.05);
+            border-color: transparent;
+            box-shadow: 0 14px 40px rgba(6, 182, 212, 0.3);
+        }
+        .skill-pill:hover::before { opacity: 0.12; }
+        .skill-pill .icon {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+            display: block;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .skill-pill:hover .icon {
+            transform: translateZ(40px) scale(1.2);
+        }
+        .skill-pill h4 {
+            font-size: 1.05rem;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .experience-preview {
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.04) 25%, rgba(139, 92, 246, 0.04) 75%, transparent 100%);
+        }
+        .exp-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            perspective: 1500px;
+        }
+        .exp-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            padding: 6px 14px;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.25);
+            border-radius: 20px;
+            letter-spacing: 0.2px;
+        }
+        .exp-company {
+            color: var(--tertiary-accent);
+            font-weight: 600;
+            font-size: 0.98rem;
+            margin-bottom: 8px;
+        }
+        .exp-title {
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .exp-subtitle {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .exp-desc {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            line-height: 1.8;
+        }
+        .exp-desc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .exp-desc li {
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .exp-desc li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-accent);
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.14) 0%, rgba(59, 130, 246, 0.12) 50%, rgba(139, 92, 246, 0.1) 100%);
+            border-top: 1px solid rgba(148, 163, 184, 0.12);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            top: -250px;
+            right: -200px;
+            pointer-events: none;
+        }
+        .cta-container {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-container h2 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #e0f2fe 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+        .cta-container p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.9;
+        }
+
+        footer {
+            background: rgba(2, 6, 23, 0.92);
+            padding: 75px 5% 38px;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+        .footer-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 26px;
+            position: relative;
+            letter-spacing: -0.2px;
+            font-weight: 700;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3.5px;
+            background: var(--accent-gradient);
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 15px; }
+        .footer-col a, .footer-col p {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .footer-col a:hover {
+            color: var(--primary-accent);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+        .footer-social-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .social-icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.05));
+            border: 1.5px solid rgba(6, 182, 212, 0.25);
+            border-radius: 14px;
+            color: var(--primary-accent);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .social-icon-link:hover {
+            background: var(--accent-gradient);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-6px) rotateX(12deg) rotateY(-8deg) scale(1.1);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.45);
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            padding-top: 32px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Tablet Responsive */
+        @media screen and (max-width: 1200px) {
+            .hero { padding: 170px 5% 90px; }
+            .expertise-grid { gap: 26px; }
+        }
+        @media screen and (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                background: rgba(2, 6, 23, 0.97);
+                backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(30px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 82%;
+                max-width: 360px;
+                gap: 42px;
+                transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                border-left: 1px solid var(--glass-border);
+                padding: 80px 30px;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+            }
+            .nav-links.nav-active { right: 0; }
+            .nav-links a { font-size: 1.15rem; }
+            .burger { display: flex; }
+            .nav-whatsapp { display: none; }
+            .whatsapp-float {
+                bottom: 22px;
+                right: 22px;
+                width: 62px;
+                height: 62px;
+                font-size: 2.3rem;
+            }
+            .hero {
+                padding: 150px 5% 80px;
+                min-height: 85vh;
+            }
+            section { padding: 80px 5%; }
+            .card { padding: 28px; }
+        }
+
+        /* Mobile Large Responsive */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: clamp(2.2rem, 9vw, 3.2rem);
+            }
+            .hero .subtitle {
+                font-size: clamp(1rem, 4vw, 1.25rem);
+            }
+            .hero .tagline {
+                font-size: clamp(0.95rem, 3vw, 1.05rem);
+                margin-bottom: 38px;
+            }
+            .hero-buttons {
+                flex-direction: row;
+                gap: 12px;
+            }
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.98rem;
+            }
+            .section-header { margin-bottom: 50px; }
+            .section-header h2 {
+                font-size: clamp(1.8rem, 7vw, 2.5rem);
+            }
+            .section-header p { font-size: 1rem; }
+            .expertise-grid {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 22px;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 16px;
+            }
+            .skill-pill { padding: 20px 14px; }
+            .skill-pill .icon { font-size: 2.3rem; }
+            .skill-pill h4 { font-size: 0.95rem; }
+            .exp-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+        }
+
+        /* Mobile Small Responsive */
+        @media screen and (max-width: 600px) {
+            :root {
+                --section-padding: 70px 5%;
+            }
+            nav {
+                padding: 14px 5%;
+            }
+            .logo {
+                font-size: 1.45rem;
+            }
+            .hero {
+                padding: 125px 5% 65px;
+                min-height: auto;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 9vw, 2.6rem);
+                letter-spacing: -1px;
+            }
+            .hero .subtitle {
+                font-size: clamp(0.95rem, 4.2vw, 1.1rem);
+                margin-bottom: 24px;
+            }
+            .hero .tagline {
+                font-size: clamp(0.9rem, 3.5vw, 0.98rem);
+                margin-bottom: 32px;
+                line-height: 1.8;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                width: 100%;
+            }
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                width: 100%;
+                max-width: 290px;
+                justify-content: center;
+            }
+            .section-header {
+                margin-bottom: 42px;
+            }
+            .section-header h2 {
+                font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+            }
+            .section-header p {
+                font-size: 0.96rem;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .card {
+                padding: 24px 22px;
+            }
+            .expertise-icon { font-size: 2.6rem; }
+            .expertise-card h3 { font-size: 1.25rem; }
+            .expertise-card p { font-size: 0.94rem; }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .skill-pill {
+                padding: 18px 10px;
+                border-radius: 14px;
+            }
+            .skill-pill .icon {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+            .skill-pill h4 {
+                font-size: 0.88rem;
+            }
+            .exp-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .exp-date {
+                font-size: 0.82rem;
+                padding: 5px 12px;
+            }
+            .exp-title { font-size: 1.2rem; }
+            .exp-subtitle { font-size: 0.92rem; }
+            .exp-desc { font-size: 0.92rem; }
+            .cta-container h2 {
+                font-size: clamp(1.6rem, 6.5vw, 2.1rem);
+            }
+            .cta-container p {
+                font-size: 0.98rem;
+                margin-bottom: 32px;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+            .footer-col h4 { font-size: 1.1rem; }
+            .social-icon-link {
+                width: 46px;
+                height: 46px;
+            }
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 56px;
+                height: 56px;
+                font-size: 2rem;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media screen and (max-width: 380px) {
+            .hero h1 { font-size: 1.85rem; }
+            .logo { font-size: 1.3rem; }
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.9rem;
+                max-width: 100%;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .skill-pill {
+                padding: 15px 8px;
+            }
+            .skill-pill .icon {
+                font-size: 1.8rem;
+            }
+            .skill-pill h4 {
+                font-size: 0.82rem;
+            }
+            .card {
+                padding: 20px 18px;
+            }
+            .section-header h2 {
+                font-size: 1.55rem;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo">Mateen Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="nav-whatsapp">
+            💬 WhatsApp
+        </a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">MUHAMMAD MATEEN AHSAN</h1>
+                <p class="subtitle fade-in delay-1">IT Manager | Web Developer | WordPress Developer | Digital Marketing Specialist</p>
+                <p class="tagline fade-in delay-2">
+                    Results-driven IT professional with 2+ years of experience in Web Development, WordPress, Ecommerce, and Digital Marketing. I develop responsive websites, WooCommerce and Shopify stores, manage SEO, website maintenance, and digital marketing campaigns. Proficient in HTML, CSS, JavaScript, PHP, MySQL, Node.js, Express.js, and WordPress—focused on delivering secure, user-friendly, and business-oriented digital solutions.
+                </p>
+                <div class="hero-buttons fade-in delay-3">
+                    <a href="projects.html" class="btn btn-primary">🚀 View Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">📧 Contact Me</a>
+                    <a href="about.html" class="btn btn-secondary">ℹ️ About Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section id="expertise">
+            <div class="section-header">
+                <h2>What I Do</h2>
+                <p>Delivering comprehensive, professional solutions across web development, ecommerce, digital marketing, and IT support</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="card expertise-card">
+                    <span class="expertise-icon">💻</span>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, fast, and modern web applications using HTML5, CSS3, JavaScript, PHP, MySQL, Node.js, and Express.js. I focus on clean code, UI/UX, and mobile-first responsive design for all devices.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">🗂️</span>
+                    <h3>CMS & Dev Tools</h3>
+                    <p>Expert in WordPress, WooCommerce, Shopify, Elementor, and Wix. Proficient with Git, GitHub, cPanel, Vercel, Netlify, Hostinger deployment, website security, backups, and seamless migration services.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">🛍️</span>
+                    <h3>Ecommerce Solutions</h3>
+                    <p>WooCommerce and Shopify store development with Facebook Marketplace, Etsy, eBay, and Daraz integrations. Product listing optimization, complete ecommerce management, and dropshipping workflows.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">📈</span>
+                    <h3>Digital Marketing</h3>
+                    <p>Search Engine Optimization (Technical SEO, On-Page SEO), Meta Ads campaigns, social media marketing, and content marketing strategies to grow online visibility, reach, and business conversions.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">🎨</span>
+                    <h3>Graphic Design</h3>
+                    <p>Creative design with Canva and Adobe Photoshop—including professional product labels, modern packaging design, eye-catching social media creatives, promotional banners, and marketing visuals.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">🔧</span>
+                    <h3>Technical Support</h3>
+                    <p>Windows installation and configuration, VMware setup, comprehensive website maintenance, security hardening, backups management, troubleshooting, and reliable technical support services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Skills Section -->
+        <section id="skills-preview" class="skills-preview">
+            <div class="section-header">
+                <h2>Featured Skills</h2>
+                <p>Technical and professional skills that drive high-quality results across projects</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-pill">
+                    <span class="icon">🌐</span>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🎨</span>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">⚡</span>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🐘</span>
+                    <h4>PHP</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🗄️</span>
+                    <h4>MySQL</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">📦</span>
+                    <h4>Node.js</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🚀</span>
+                    <h4>Express.js</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">📝</span>
+                    <h4>WordPress</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🛒</span>
+                    <h4>WooCommerce</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🛍️</span>
+                    <h4>Shopify</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🧩</span>
+                    <h4>Elementor</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🔍</span>
+                    <h4>SEO</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">📊</span>
+                    <h4>Meta Ads</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🎭</span>
+                    <h4>Canva</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🖼️</span>
+                    <h4>Photoshop</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🐙</span>
+                    <h4>Git & GitHub</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Highlights -->
+        <section id="experience-preview" class="experience-preview">
+            <div class="section-header">
+                <h2>Experience Highlights</h2>
+                <p>Professional experience spanning IT management, web development, ecommerce, and digital marketing</p>
+            </div>
+            <div class="exp-grid">
+                <div class="card">
+                    <span class="exp-date">Aug 2024 – Present</span>
+                    <div class="exp-company">Anjileen Handcraft and Foods (Pvt.) Ltd</div>
+                    <h3 class="exp-title">IT Manager & Web Developer</h3>
+                    <p class="exp-subtitle">Remote Role</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Developed, maintained, and optimized company WordPress website with performance tuning, security, backups, and content updates</li>
+                            <li>Managed SEO, ecommerce operations, digital marketing campaigns, social media, graphic design, and technical support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="exp-date">Aug 2026 – Sep 2026</span>
+                    <div class="exp-company">Sukoon Developments – Islamabad</div>
+                    <h3 class="exp-title">Web Developer</h3>
+                    <p class="exp-subtitle">Venue Anchorage, Islamabad</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Designed and launched official company website with WordPress and Elementor — responsive, modern, and user-friendly interface</li>
+                            <li>Managed website maintenance, security, backups, performance optimization, on-page SEO, and post-launch support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="exp-date">April 2026 – Jul 2026</span>
+                    <div class="exp-company">SilverDots – Islamabad</div>
+                    <h3 class="exp-title">Digital Marketing & Ecommerce Executive</h3>
+                    <p class="exp-subtitle">Kazani Heights, Islamabad</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Managed product listings, SEO, customer support, inventory, and orders across Facebook Marketplace, Etsy, eBay, and Daraz</li>
+                            <li>Conducted product research and implemented digital marketing strategies for improved marketplace performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="exp-date">Contract – 2 Months</span>
+                    <div class="exp-company">Mines & Minerals World</div>
+                    <h3 class="exp-title">Web Developer (Contract)</h3>
+                    <p class="exp-subtitle">Full WooCommerce Ecommerce Build</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Developed a complete WooCommerce ecommerce website with responsive pages, secure payment-ready integration, backups, and maintenance</li>
+                            <li>Worked closely with client to deliver a professional online store perfectly aligned with business objectives</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="exp-date">Contract – 1 Month</span>
+                    <div class="exp-company">The Floral Village – Islamabad</div>
+                    <h3 class="exp-title">Ecommerce Web Developer</h3>
+                    <p class="exp-subtitle">F-7, Islamabad</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Built and launched a responsive WooCommerce flower shop with organized product categories, payment-ready functionality, and on-page SEO</li>
+                            <li>Collaborated with client to successfully deliver the project within the tight contract timeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta-section">
+            <div class="cta-container">
+                <h2>Ready to Work Together?</h2>
+                <p>Let's collaborate on your next web development project, ecommerce store, digital marketing campaign, or IT support needs. I'm open to new opportunities, freelance work, and professional partnerships.</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">🎨 View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">📧 Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Mateen Portfolio</h4>
+                <p>Professional portfolio showcasing IT Management, Web Development, WordPress, Ecommerce, and Digital Marketing expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><p>devolper.expert@gmail.com</p></li>
+                    <li><p>+92 314 970 5607</p></li>
+                    <li><p>Islamabad, Pakistan</p></li>
+                    <li><p>Open to Relocation</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="footer-social-links">
+                    <a href="https://github.com/Mateenahsan00" target="_blank" class="social-icon-link" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22V23c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateenahsan00/" target="_blank" class="social-icon-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8 8H11.83V10.18H11.88C12.41 9.17 13.71 8.1 15.65 8.1C19.69 8.1 20.5 10.76 20.5 14.22V24H16.5V15.35C16.5 13.29 16.46 10.64 13.65 10.64C10.79 10.64 10.35 12.87 10.35 15.2V24H6.35V8H8Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mateen.devstudio" target="_blank" class="social-icon-link" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1EAs9AAeJW/" target="_blank" class="social-icon-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073C24 5.405 18.597 0 12 0S0 5.405 0 12.073C0 18.1 4.432 23.094 10.219 24V15.579H7.15V12.074h3.069V9.469c0-3.038 1.792-4.707 4.538-4.707 1.312 0 2.686.235 2.686.235v2.963h-1.514c-1.491 0-1.956.926-1.956 1.875v2.271h3.328l-.532 3.505h-2.796V24C19.568 23.094 24 18.1 24 12.073z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mateen Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+        };
+        navSlide();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('nav-active');
+                document.querySelector('.burger').classList.remove('toggle');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -60px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const delay = Math.min((index % 6) * 0.08, 0.4);
+                    entry.target.style.transitionDelay = delay + 's';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.card, .skill-pill, .section-header').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px) rotateX(5deg)';
+            el.style.transition = 'opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (window.innerWidth < 992) return;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.015)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="whatsapp-float">
+        💬
+    </a>
+</body>
+</html>

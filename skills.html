@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2R61HRX0L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P2R61HRX0L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateen Portfolio - Skills</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e293b 50%, #0f172a 75%, #020617 100%);
+            color: #f1f5f9;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        :root {
+            --primary-accent: #06b6d4;
+            --secondary-accent: #3b82f6;
+            --tertiary-accent: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            --accent-gradient-hover: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%);
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-bg-strong: rgba(30, 41, 59, 0.85);
+            --glass-border: rgba(148, 163, 184, 0.15);
+            --glass-border-hover: rgba(6, 182, 212, 0.4);
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --section-padding: 100px 5%;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.15);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated Background Orbs - 3D Depth Effect */
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat3D 20s ease-in-out infinite;
+        }
+        body::before {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, transparent 70%);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        body::after {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, transparent 70%);
+            bottom: -15%;
+            right: -10%;
+            animation-delay: -10s;
+        }
+        @keyframes orbFloat3D {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(40px, -30px) scale(1.08); }
+            50% { transform: translate(-20px, 50px) scale(0.95); }
+            75% { transform: translate(30px, 20px) scale(1.05); }
+        }
+
+        /* Navbar WhatsApp Button */
+        .nav-whatsapp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--whatsapp-green);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .nav-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px) rotateX(8deg);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 68px;
+            height: 68px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: floatPulse3D 2.5s ease-in-out infinite, floatEntrance 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        @keyframes floatPulse3D {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transform: scale(1) translateY(0); }
+            50% { box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6); transform: scale(1.08) translateY(-5px); }
+        }
+        @keyframes floatEntrance {
+            from { opacity: 0; transform: scale(0.3) translateY(40px) rotate(-180deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) rotate(0); }
+        }
+        .whatsapp-float:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.2) translateY(-6px) rotateX(12deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+            animation: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 5%;
+            background: rgba(2, 6, 23, 0.82);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.35s ease;
+        }
+        nav.scrolled {
+            padding: 14px 5%;
+            border-bottom-color: rgba(6, 182, 212, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            font-size: 1.85rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--accent-gradient);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        .burger div {
+            width: 28px;
+            height: 3px;
+            background: linear-gradient(90deg, #fff, #cbd5e1);
+            border-radius: 3px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .burger.toggle .line1 { transform: rotate(-45deg) translate(-6px, 8px); }
+        .burger.toggle .line2 { opacity: 0; transform: translateX(-20px); }
+        .burger.toggle .line3 { transform: rotate(45deg) translate(-6px, -8px); }
+
+        main { padding-top: 120px; position: relative; z-index: 1; }
+        section { padding: var(--section-padding); position: relative; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        .section-header h2 {
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-gradient);
+            margin: 22px auto 0;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Skill Cards */
+        .skills-grid {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 30px;
+            perspective: 1800px;
+        }
+        .skill-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            box-shadow: var(--shadow-card);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2.5px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .skill-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mx, 50%) var(--my, 0%), rgba(6, 182, 212, 0.08), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(-3deg) scale(1.012);
+            border-color: var(--glass-border-hover);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(6, 182, 212, 0.15);
+        }
+        .skill-card:hover::before { opacity: 1; }
+        .skill-card:hover::after { opacity: 1; }
+        .skill-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 26px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.2px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .skill-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45px;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-card:hover h3::after { width: 90px; }
+        .skill-card h3 span:first-child {
+            font-size: 2rem;
+            filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3));
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-block;
+        }
+        .skill-card:hover h3 span:first-child {
+            transform: translateZ(35px) scale(1.18) rotate(-6deg);
+            filter: drop-shadow(0 8px 18px rgba(6, 182, 212, 0.5));
+        }
+        .skill-item { margin-bottom: 22px; }
+        .skill-item:last-child { margin-bottom: 0; }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 0.97rem;
+            color: var(--text-light);
+        }
+        .skill-name span:last-child {
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .skill-bar {
+            height: 11px;
+            background: rgba(148, 163, 184, 0.12);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(148, 163, 184, 0.08);
+        }
+        .skill-progress {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            width: 0%;
+            animation: fillBar 1.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            animation: shineBar 2.5s ease-in-out infinite;
+        }
+        @keyframes shineBar {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--progress); }
+        }
+
+        /* Tools Pills Section */
+        .tools-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.04) 25%, rgba(139, 92, 246, 0.04) 75%, transparent 100%);
+        }
+        .tools-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            perspective: 1500px;
+        }
+        .tool-pill {
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(139, 92, 246, 0.06));
+            border: 1.5px solid rgba(6, 182, 212, 0.2);
+            padding: 24px 16px;
+            border-radius: 18px;
+            text-align: center;
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px) saturate(180%);
+        }
+        .tool-pill::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .tool-pill > * { position: relative; z-index: 1; }
+        .tool-pill:hover {
+            transform: translateY(-8px) rotateX(12deg) scale(1.06);
+            border-color: transparent;
+            box-shadow: 0 15px 45px rgba(6, 182, 212, 0.3);
+        }
+        .tool-pill:hover::before { opacity: 0.12; }
+        .tool-pill .icon {
+            font-size: 2.7rem;
+            margin-bottom: 10px;
+            display: block;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 4px 10px rgba(6, 182, 212, 0.25));
+        }
+        .tool-pill:hover .icon {
+            transform: translateZ(45px) scale(1.2);
+            filter: drop-shadow(0 10px 24px rgba(6, 182, 212, 0.55));
+        }
+        .tool-pill h4 {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(2, 6, 23, 0.92);
+            padding: 75px 5% 38px;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+        .footer-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 26px;
+            position: relative;
+            letter-spacing: -0.2px;
+            font-weight: 700;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3.5px;
+            background: var(--accent-gradient);
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 15px; }
+        .footer-col a, .footer-col p {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .footer-col a:hover {
+            color: var(--primary-accent);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+        .footer-social-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .social-icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.05));
+            border: 1.5px solid rgba(6, 182, 212, 0.25);
+            border-radius: 14px;
+            color: var(--primary-accent);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .social-icon-link:hover {
+            background: var(--accent-gradient);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-6px) rotateX(12deg) rotateY(-8deg) scale(1.1);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.45);
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            padding-top: 32px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* === Responsive Breakpoints === */
+
+        /* Large Tablet */
+        @media screen and (max-width: 1200px) {
+            .skills-grid { gap: 26px; }
+            .tools-grid { gap: 16px; }
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                background: rgba(2, 6, 23, 0.97);
+                backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(30px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 82%;
+                max-width: 360px;
+                gap: 42px;
+                transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                border-left: 1px solid var(--glass-border);
+                padding: 80px 30px;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+            }
+            .nav-links.nav-active { right: 0; }
+            .nav-links a { font-size: 1.15rem; }
+            .burger { display: flex; }
+            .nav-whatsapp { display: none; }
+            .whatsapp-float {
+                bottom: 22px;
+                right: 22px;
+                width: 62px;
+                height: 62px;
+                font-size: 2.3rem;
+            }
+            section { padding: 80px 5%; }
+            .skill-card { padding: 28px; }
+        }
+
+        /* Mobile Large */
+        @media screen and (max-width: 768px) {
+            main { padding-top: 110px; }
+            .section-header { margin-bottom: 50px; }
+            .section-header h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .section-header p { font-size: 1rem; }
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+                gap: 22px;
+            }
+            .skill-card h3 { font-size: 1.25rem; margin-bottom: 22px; }
+            .skill-card h3 span:first-child { font-size: 1.7rem; }
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 14px;
+            }
+            .tool-pill { padding: 20px 12px; border-radius: 14px; }
+            .tool-pill .icon { font-size: 2.3rem; }
+            .tool-pill h4 { font-size: 0.92rem; }
+        }
+
+        /* Mobile Small */
+        @media screen and (max-width: 600px) {
+            :root { --section-padding: 70px 5%; }
+            nav { padding: 14px 5%; }
+            .logo { font-size: 1.45rem; }
+            section { padding: 70px 5%; }
+            .section-header { margin-bottom: 42px; }
+            .section-header h2 { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
+            .section-header p { font-size: 0.96rem; }
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .skill-card { padding: 24px 22px; border-radius: 16px; }
+            .skill-card h3 { font-size: 1.18rem; margin-bottom: 20px; padding-bottom: 10px; }
+            .skill-item { margin-bottom: 18px; }
+            .skill-name { font-size: 0.92rem; }
+            .skill-bar { height: 9px; }
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                max-width: 100%;
+            }
+            .tool-pill {
+                padding: 18px 10px;
+                border-radius: 14px;
+            }
+            .tool-pill .icon { font-size: 2rem; margin-bottom: 8px; }
+            .tool-pill h4 { font-size: 0.87rem; }
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+            .footer-col h4 { font-size: 1.1rem; }
+            .social-icon-link { width: 46px; height: 46px; }
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 56px;
+                height: 56px;
+                font-size: 2rem;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media screen and (max-width: 380px) {
+            main { padding-top: 100px; }
+            .logo { font-size: 1.3rem; }
+            .section-header h2 { font-size: 1.55rem; }
+            .skill-card { padding: 20px 18px; }
+            .skill-card h3 { font-size: 1.1rem; }
+            .skill-card h3 span:first-child { font-size: 1.55rem; }
+            .tools-grid { gap: 10px; }
+            .tool-pill { padding: 16px 8px; border-radius: 12px; }
+            .tool-pill .icon { font-size: 1.8rem; }
+            .tool-pill h4 { font-size: 0.82rem; }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo">Mateen Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="nav-whatsapp">
+            💬 WhatsApp
+        </a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Core Skills Section -->
+        <section id="core-skills">
+            <div class="section-header">
+                <h2>Core Skills & Technologies</h2>
+                <p>My technical and professional expertise spanning web development, CMS, ecommerce, digital marketing, and IT support</p>
+            </div>
+            <div class="skills-grid">
+                <!-- 1. Web Development -->
+                <div class="skill-card">
+                    <h3><span>💻</span><span>Web Development</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>HTML5 & CSS3</span><span>92%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 92%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>JavaScript (ES6+)</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>PHP & MySQL</span><span>86%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 86%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Node.js & Express.js</span><span>82%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 82%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Responsive Web Design / UI-UX</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 90%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 2. CMS Platforms -->
+                <div class="skill-card">
+                    <h3><span>🗂️</span><span>CMS Platforms</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>WordPress Core & Customization</span><span>93%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 93%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>WooCommerce</span><span>91%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 91%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Shopify</span><span>82%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 82%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Elementor Page Builder</span><span>92%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 92%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Wix</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 80%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 3. Development Tools -->
+                <div class="skill-card">
+                    <h3><span>⚙️</span><span>Development & DevOps</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Git & GitHub (Version Control)</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 88%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>cPanel & Hostinger Management</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Vercel & Netlify Deployment</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Website Security & Hardening</span><span>84%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 84%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Backup & Migration</span><span>89%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 89%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 4. Graphic Design -->
+                <div class="skill-card">
+                    <h3><span>🎨</span><span>Graphic Design</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Canva (All Designs)</span><span>94%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 94%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Adobe Photoshop</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Product Labels & Packaging Design</span><span>86%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 86%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Social Media Creatives</span><span>92%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 92%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Marketing Banners & Ads</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 88%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 5. Ecommerce -->
+                <div class="skill-card">
+                    <h3><span>🛍️</span><span>Ecommerce Management</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Shopify & WooCommerce Stores</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Facebook Marketplace</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Etsy & eBay</span><span>83%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 83%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Daraz Marketplace</span><span>86%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 86%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Product Listing Optimization</span><span>89%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 89%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 6. Digital Marketing -->
+                <div class="skill-card">
+                    <h3><span>📈</span><span>Digital Marketing</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>SEO (Technical + On-Page)</span><span>87%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 87%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Meta Ads (Facebook & Instagram)</span><span>82%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 82%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Social Media Marketing</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 88%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Content Marketing & Strategy</span><span>84%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 84%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Campaign Management</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 85%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- 7. Technical Support -->
+                <div class="skill-card">
+                    <h3><span>🔧</span><span>Technical Support</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Windows Installation & Config</span><span>92%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 92%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>VMware Virtualization</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Website Maintenance & Updates</span><span>93%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 93%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Website Security & Malware Checks</span><span>86%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 86%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Technical Troubleshooting</span><span>91%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="--progress: 91%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies Pills Section -->
+        <section id="tools" class="tools-section">
+            <div class="section-header">
+                <h2>Tools & Technologies</h2>
+                <p>Everyday software, platforms, and frameworks I use to deliver professional results</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-pill">
+                    <span class="icon">🌐</span>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🎨</span>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">⚡</span>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🐘</span>
+                    <h4>PHP</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🗄️</span>
+                    <h4>MySQL</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">📦</span>
+                    <h4>Node.js</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🚀</span>
+                    <h4>Express.js</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">📝</span>
+                    <h4>WordPress</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🛒</span>
+                    <h4>WooCommerce</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🛍️</span>
+                    <h4>Shopify</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🧩</span>
+                    <h4>Elementor</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🏗️</span>
+                    <h4>Wix</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🐙</span>
+                    <h4>Git & GitHub</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🖥️</span>
+                    <h4>cPanel</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">▲</span>
+                    <h4>Vercel</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">◐</span>
+                    <h4>Netlify</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🌐</span>
+                    <h4>Hostinger</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🔍</span>
+                    <h4>SEO</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">📊</span>
+                    <h4>Meta Ads</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🎭</span>
+                    <h4>Canva</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🖼️</span>
+                    <h4>Photoshop</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🪟</span>
+                    <h4>Windows</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">💿</span>
+                    <h4>VMware</h4>
+                </div>
+                <div class="tool-pill">
+                    <span class="icon">🛡️</span>
+                    <h4>Security</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Mateen Portfolio</h4>
+                <p>Professional portfolio showcasing IT Management, Web Development, WordPress, Ecommerce, and Digital Marketing expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><p>devolper.expert@gmail.com</p></li>
+                    <li><p>+92 314 970 5607</p></li>
+                    <li><p>Islamabad, Pakistan</p></li>
+                    <li><p>Open to Relocation</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="footer-social-links">
+                    <a href="https://github.com/Mateenahsan00" target="_blank" class="social-icon-link" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22V23c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateenahsan00/" target="_blank" class="social-icon-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8 8H11.83V10.18H11.88C12.41 9.17 13.71 8.1 15.65 8.1C19.69 8.1 20.5 10.76 20.5 14.22V24H16.5V15.35C16.5 13.29 16.46 10.64 13.65 10.64C10.79 10.64 10.35 12.87 10.35 15.2V24H6.35V8H8Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mateen.devstudio" target="_blank" class="social-icon-link" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1EAs9AAeJW/" target="_blank" class="social-icon-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073C24 5.405 18.597 0 12 0S0 5.405 0 12.073C0 18.1 4.432 23.094 10.219 24V15.579H7.15V12.074h3.069V9.469c0-3.038 1.792-4.707 4.538-4.707 1.312 0 2.686.235 2.686.235v2.963h-1.514c-1.491 0-1.956.926-1.956 1.875v2.271h3.328l-.532 3.505h-2.796V24C19.568 23.094 24 18.1 24 12.073z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mateen Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+        };
+        navSlide();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('nav-active');
+                document.querySelector('.burger').classList.remove('toggle');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -60px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const delay = Math.min((index % 8) * 0.07, 0.42);
+                    entry.target.style.transitionDelay = delay + 's';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.section-header, .skill-card, .tool-pill').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px) rotateX(5deg)';
+            el.style.transition = 'opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.skill-card, .tool-pill').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (window.innerWidth < 992) return;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                card.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+                card.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+                if (card.classList.contains('skill-card')) {
+                    card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.012)`;
+                } else {
+                    card.style.transform = `translateY(-8px) rotateX(${Math.max(rotateX, 4)}deg) rotateY(${rotateY}deg) scale(1.06)`;
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="whatsapp-float">
+        💬
+    </a>
+</body>
+</html>

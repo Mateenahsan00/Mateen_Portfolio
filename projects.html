@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2R61HRX0L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P2R61HRX0L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateen Portfolio - Projects</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e293b 50%, #0f172a 75%, #020617 100%);
+            color: #f1f5f9;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        :root {
+            --primary-accent: #06b6d4;
+            --secondary-accent: #3b82f6;
+            --tertiary-accent: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            --accent-gradient-hover: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%);
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-bg-strong: rgba(30, 41, 59, 0.85);
+            --glass-border: rgba(148, 163, 184, 0.15);
+            --glass-border-hover: rgba(6, 182, 212, 0.4);
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --section-padding: 100px 5%;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.15);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated Background Orbs - 3D Depth Effect */
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat3D 20s ease-in-out infinite;
+        }
+        body::before {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, transparent 70%);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        body::after {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, transparent 70%);
+            bottom: -15%;
+            right: -10%;
+            animation-delay: -10s;
+        }
+        @keyframes orbFloat3D {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(40px, -30px) scale(1.08); }
+            50% { transform: translate(-20px, 50px) scale(0.95); }
+            75% { transform: translate(30px, 20px) scale(1.05); }
+        }
+
+        /* Navbar WhatsApp Button */
+        .nav-whatsapp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--whatsapp-green);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .nav-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px) rotateX(8deg);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 68px;
+            height: 68px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: floatPulse3D 2.5s ease-in-out infinite, floatEntrance 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        @keyframes floatPulse3D {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transform: scale(1) translateY(0); }
+            50% { box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6); transform: scale(1.08) translateY(-5px); }
+        }
+        @keyframes floatEntrance {
+            from { opacity: 0; transform: scale(0.3) translateY(40px) rotate(-180deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) rotate(0); }
+        }
+        .whatsapp-float:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.2) translateY(-6px) rotateX(12deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+            animation: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 5%;
+            background: rgba(2, 6, 23, 0.82);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.35s ease;
+        }
+        nav.scrolled {
+            padding: 14px 5%;
+            border-bottom-color: rgba(6, 182, 212, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            font-size: 1.85rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--accent-gradient);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        .burger div {
+            width: 28px;
+            height: 3px;
+            background: linear-gradient(90deg, #fff, #cbd5e1);
+            border-radius: 3px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .burger.toggle .line1 { transform: rotate(-45deg) translate(-6px, 8px); }
+        .burger.toggle .line2 { opacity: 0; transform: translateX(-20px); }
+        .burger.toggle .line3 { transform: rotate(45deg) translate(-6px, -8px); }
+
+        main { padding-top: 120px; position: relative; z-index: 1; }
+        section { padding: var(--section-padding); position: relative; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        .section-header h2 {
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-gradient);
+            margin: 22px auto 0;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Generic Fade-in Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .fade-in.delay-1 { animation-delay: 0.15s; }
+        .fade-in.delay-2 { animation-delay: 0.3s; }
+        .fade-in.delay-3 { animation-delay: 0.45s; }
+        .fade-in.delay-4 { animation-delay: 0.6s; }
+        .fade-in.delay-5 { animation-delay: 0.75s; }
+        .fade-in.delay-6 { animation-delay: 0.9s; }
+        .fade-in.delay-7 { animation-delay: 1.05s; }
+        .fade-in.delay-8 { animation-delay: 1.2s; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Project Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 56px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .filter-tab {
+            padding: 12px 26px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1.5px solid rgba(148, 163, 184, 0.2);
+            border-radius: 14px;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        .filter-tab::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .filter-tab > * { position: relative; z-index: 1; }
+        .filter-tab:hover {
+            transform: translateY(-4px) rotateX(8deg) scale(1.03);
+            border-color: rgba(6, 182, 212, 0.4);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+        }
+        .filter-tab.active {
+            background: var(--accent-gradient);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 8px 28px rgba(6, 182, 212, 0.4);
+            transform: translateY(-2px);
+        }
+        .filter-tab.active::before { opacity: 0; }
+
+        /* Projects Section */
+        .projects-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.04) 25%, rgba(139, 92, 246, 0.04) 75%, transparent 100%);
+        }
+        .projects-grid {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 32px;
+            perspective: 1500px;
+        }
+        .project-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 22px;
+            overflow: hidden;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            box-shadow: var(--shadow-card);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            perspective: 1200px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.45s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .project-card:hover {
+            transform: translateY(-14px) rotateX(8deg) rotateY(-5deg) scale(1.015);
+            border-color: var(--glass-border-hover);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 50px rgba(6, 182, 212, 0.18);
+        }
+        .project-card:hover::before { opacity: 1; }
+        .project-card:hover::after { opacity: 0.04; }
+        .project-card > * { position: relative; z-index: 1; }
+
+        .project-preview {
+            position: relative;
+            height: 240px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.18));
+            border-bottom: 1px solid var(--glass-border);
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        .project-preview::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(2, 6, 23, 0.85) 100%);
+            z-index: 1;
+            transition: opacity 0.4s ease;
+        }
+        .project-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .project-card:hover .project-preview img {
+            transform: scale(1.12) translateZ(20px);
+        }
+        .project-category-badge {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 2;
+            padding: 7px 16px;
+            background: rgba(2, 6, 23, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .project-card:hover .project-category-badge {
+            background: var(--accent-gradient);
+            border-color: transparent;
+            color: #fff;
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+        }
+        .project-number {
+            position: absolute;
+            bottom: 16px;
+            right: 20px;
+            z-index: 2;
+            font-size: 3.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(6, 182, 212, 0.3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            line-height: 1;
+            opacity: 0.7;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .project-card:hover .project-number {
+            transform: translateZ(40px) scale(1.15) rotate(-5deg);
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 30px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            flex: 1;
+        }
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
+            position: relative;
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .project-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            transition: width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .project-card:hover .project-title {
+            transform: translateZ(25px);
+            background: linear-gradient(135deg, #fff 0%, #bae6fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-card:hover .project-title::after {
+            width: 100px;
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.5);
+        }
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 2px;
+        }
+        .tag {
+            padding: 7px 15px;
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.08));
+            border: 1.5px solid rgba(6, 182, 212, 0.25);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: var(--primary-accent);
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .project-card:hover .tag {
+            border-color: rgba(6, 182, 212, 0.45);
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.1));
+        }
+        .tag:hover {
+            transform: translateY(-3px) translateZ(15px) scale(1.05);
+            box-shadow: 0 6px 18px rgba(6, 182, 212, 0.25);
+        }
+        .project-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 22px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.94rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn:hover::before { left: 100%; }
+        .btn > * { position: relative; z-index: 1; }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35), 0 0 0 1px rgba(6, 182, 212, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-5px) rotateX(10deg) scale(1.03);
+            box-shadow: 0 16px 42px rgba(6, 182, 212, 0.5), 0 0 55px rgba(6, 182, 212, 0.22);
+            background: var(--accent-gradient-hover);
+        }
+        .btn-outline {
+            background: rgba(30, 41, 59, 0.5);
+            color: var(--primary-accent);
+            border: 1.5px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(8px);
+        }
+        .btn-outline:hover {
+            background: rgba(6, 182, 212, 0.12);
+            transform: translateY(-4px) rotateX(8deg) scale(1.02);
+            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: 0 12px 32px rgba(6, 182, 212, 0.22);
+        }
+
+        /* Project Stats Bar */
+        .project-stats {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        .project-stat-card {
+            text-align: center;
+            padding: 28px 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            backdrop-filter: blur(16px) saturate(180%);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .project-stat-card > * { position: relative; z-index: 1; }
+        .project-stat-card:hover {
+            transform: translateY(-8px) rotateX(8deg) scale(1.03);
+            border-color: transparent;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+        }
+        .project-stat-card:hover::before { opacity: 0.08; }
+        .project-stat-number {
+            font-size: clamp(2.3rem, 5vw, 3rem);
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+        .project-stat-label {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.14) 0%, rgba(59, 130, 246, 0.12) 50%, rgba(139, 92, 246, 0.1) 100%);
+            border-top: 1px solid rgba(148, 163, 184, 0.12);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            top: -250px;
+            right: -200px;
+            pointer-events: none;
+        }
+        .cta-container {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-container h2 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #e0f2fe 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+        .cta-container p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.9;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn-secondary {
+            background: rgba(30, 41, 59, 0.5);
+            color: #fff;
+            border: 1.5px solid rgba(148, 163, 184, 0.25);
+            backdrop-filter: blur(10px);
+            flex: 0 0 auto;
+        }
+        .btn-secondary:hover {
+            background: rgba(51, 65, 85, 0.6);
+            transform: translateY(-5px) rotateX(8deg) scale(1.02);
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 12px 35px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(2, 6, 23, 0.92);
+            padding: 75px 5% 38px;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+        .footer-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 26px;
+            position: relative;
+            letter-spacing: -0.2px;
+            font-weight: 700;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3.5px;
+            background: var(--accent-gradient);
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 15px; }
+        .footer-col a, .footer-col p {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .footer-col a:hover {
+            color: var(--primary-accent);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+        .footer-social-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .social-icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.05));
+            border: 1.5px solid rgba(6, 182, 212, 0.25);
+            border-radius: 14px;
+            color: var(--primary-accent);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .social-icon-link:hover {
+            background: var(--accent-gradient);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-6px) rotateX(12deg) rotateY(-8deg) scale(1.1);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.45);
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            padding-top: 32px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* === Responsive Breakpoints === */
+
+        /* Large Tablet */
+        @media screen and (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 28px;
+            }
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                background: rgba(2, 6, 23, 0.97);
+                backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(30px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 82%;
+                max-width: 360px;
+                gap: 42px;
+                transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                border-left: 1px solid var(--glass-border);
+                padding: 80px 30px;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+            }
+            .nav-links.nav-active { right: 0; }
+            .nav-links a { font-size: 1.15rem; }
+            .burger { display: flex; }
+            .nav-whatsapp { display: none; }
+            .whatsapp-float {
+                bottom: 22px;
+                right: 22px;
+                width: 62px;
+                height: 62px;
+                font-size: 2.3rem;
+            }
+            section { padding: 80px 5%; }
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 24px;
+            }
+            .project-content { padding: 26px 24px; }
+        }
+
+        /* Mobile Large */
+        @media screen and (max-width: 768px) {
+            main { padding-top: 110px; }
+            .section-header { margin-bottom: 50px; }
+            .section-header h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .section-header p { font-size: 1rem; }
+            .filter-tabs {
+                gap: 10px;
+                margin-bottom: 44px;
+            }
+            .filter-tab {
+                padding: 10px 18px;
+                font-size: 0.88rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                gap: 22px;
+            }
+            .project-preview { height: 220px; }
+            .project-content { padding: 24px 22px; }
+            .project-title { font-size: 1.35rem; }
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-bottom: 50px;
+            }
+            .project-stat-card { padding: 22px 16px; }
+            .project-stat-number { font-size: 2rem; }
+            .cta-container p { font-size: 1rem; margin-bottom: 32px; }
+            .cta-buttons { gap: 14px; }
+            .btn, .btn-secondary { padding: 13px 26px; }
+        }
+
+        /* Mobile Small */
+        @media screen and (max-width: 600px) {
+            :root {
+                --section-padding: 70px 5%;
+            }
+            nav { padding: 14px 5%; }
+            .logo { font-size: 1.45rem; }
+            section { padding: 70px 5%; }
+            .section-header { margin-bottom: 42px; }
+            .section-header h2 { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
+            .section-header p { font-size: 0.96rem; }
+            .filter-tabs {
+                gap: 8px;
+                margin-bottom: 38px;
+            }
+            .filter-tab {
+                padding: 9px 14px;
+                font-size: 0.82rem;
+                border-radius: 12px;
+            }
+            .projects-grid { gap: 18px; }
+            .project-card { border-radius: 18px; }
+            .project-preview { height: 200px; }
+            .project-number { font-size: 3.2rem; }
+            .project-category-badge {
+                padding: 6px 12px;
+                font-size: 0.72rem;
+            }
+            .project-content {
+                padding: 22px 20px;
+                gap: 14px;
+            }
+            .project-title { font-size: 1.22rem; }
+            .project-desc { font-size: 0.94rem; line-height: 1.7; }
+            .project-tags { gap: 6px; }
+            .tag {
+                padding: 6px 12px;
+                font-size: 0.78rem;
+                border-radius: 10px;
+            }
+            .project-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                padding: 13px 22px;
+                font-size: 0.93rem;
+            }
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+                margin-bottom: 42px;
+            }
+            .project-stat-card { padding: 20px 14px; border-radius: 14px; }
+            .project-stat-number { font-size: 1.8rem; }
+            .project-stat-label { font-size: 0.9rem; }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            .cta-container h2 {
+                font-size: clamp(1.6rem, 6.5vw, 2.1rem);
+            }
+            .footer-container { grid-template-columns: 1fr; gap: 34px; }
+            .footer-col h4 { font-size: 1.1rem; }
+            .social-icon-link { width: 46px; height: 46px; }
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 56px;
+                height: 56px;
+                font-size: 2rem;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media screen and (max-width: 380px) {
+            main { padding-top: 100px; }
+            .logo { font-size: 1.3rem; }
+            .section-header h2 { font-size: 1.55rem; }
+            .filter-tabs { gap: 6px; }
+            .filter-tab { padding: 8px 12px; font-size: 0.78rem; }
+            .project-preview { height: 180px; }
+            .project-number { font-size: 2.8rem; }
+            .project-content { padding: 20px 18px; }
+            .project-title { font-size: 1.12rem; }
+            .project-desc { font-size: 0.9rem; }
+            .tag { padding: 5px 10px; font-size: 0.75rem; }
+            .btn { padding: 12px 20px; font-size: 0.9rem; }
+            .project-stats { gap: 12px; }
+            .project-stat-card { padding: 18px 12px; }
+            .project-stat-number { font-size: 1.65rem; }
+            .project-stat-label { font-size: 0.85rem; }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+            }
+            .social-icon-link { width: 44px; height: 44px; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo">Mateen Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="nav-whatsapp">
+            💬 WhatsApp
+        </a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Projects Header Section -->
+        <section id="projects-header">
+            <div class="section-header fade-in">
+                <h2>Featured Projects</h2>
+                <p>A curated selection of projects showcasing my expertise in Web Development, Ecommerce, WordPress, and Full-Stack Solutions</p>
+            </div>
+
+            <!-- Project Stats -->
+            <div class="project-stats">
+                <div class="project-stat-card fade-in delay-1">
+                    <div class="project-stat-number">8+</div>
+                    <div class="project-stat-label">Projects Delivered</div>
+                </div>
+                <div class="project-stat-card fade-in delay-2">
+                    <div class="project-stat-number">4</div>
+                    <div class="project-stat-label">Full-Stack Apps</div>
+                </div>
+                <div class="project-stat-card fade-in delay-3">
+                    <div class="project-stat-number">4</div>
+                    <div class="project-stat-label">Live Websites</div>
+                </div>
+                <div class="project-stat-card fade-in delay-4">
+                    <div class="project-stat-number">18+</div>
+                    <div class="project-stat-label">Technologies Used</div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs fade-in delay-2">
+                <button class="filter-tab active" data-filter="all">📁 All Projects</button>
+                <button class="filter-tab" data-filter="fullstack">⚡ Full-Stack</button>
+                <button class="filter-tab" data-filter="wordpress">🗂️ WordPress</button>
+                <button class="filter-tab" data-filter="ecommerce">🛍️ Ecommerce</button>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-section" id="projects-grid-section">
+            <div class="projects-grid">
+                <!-- Project 1: Kitaab Faroosh -->
+                <div class="project-card fade-in delay-1" data-category="fullstack ecommerce">
+                    <div class="project-preview">
+                        <span class="project-category-badge">Full-Stack</span>
+                        <span class="project-number">01</span>
+                        <img src="image1.jpeg" alt="Kitaab Faroosh - Educational Marketplace Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kitaab Faroosh</h3>
+                        <p class="project-desc">Educational Marketplace Platform developed for buying and selling educational materials with structured categories, user accounts, and intuitive navigation. Built with a complete Node.js backend and MySQL database architecture.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Mateenahsan00/Kitaab-Faroosh" target="_blank" class="btn btn-outline">
+                                🔗 View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: NH Network Platform -->
+                <div class="project-card fade-in delay-2" data-category="fullstack">
+                    <div class="project-preview">
+                        <span class="project-category-badge">Full-Stack</span>
+                        <span class="project-number">02</span>
+                        <img src="image2.jpeg" alt="NH Network Platform - Investment Awareness Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NH Network Platform</h3>
+                        <p class="project-desc">Investment awareness and online earning website with organized learning sections, step-by-step guidance pages, user registration, and engagement-focused layouts designed for educational content delivery.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Mateenahsan00/NH-Network" target="_blank" class="btn btn-outline">
+                                🔗 View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Dropify -->
+                <div class="project-card fade-in delay-3" data-category="fullstack ecommerce">
+                    <div class="project-preview">
+                        <span class="project-category-badge">Full-Stack</span>
+                        <span class="project-number">03</span>
+                        <img src="image3.jpeg" alt="Dropify - B2B Dropshipping & Wholesale Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dropify</h3>
+                        <p class="project-desc">B2B Dropshipping & Wholesale Platform connecting dropshippers and wholesalers with advanced product trading features, seller dashboards, and an investment support system for new marketplace sellers.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Mateenahsan00/Dropify" target="_blank" class="btn btn-outline">
+                                🔗 View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Custom Ecommerce CMS -->
+                <div class="project-card fade-in delay-4" data-category="fullstack ecommerce">
+                    <div class="project-preview">
+                        <span class="project-category-badge">Full-Stack</span>
+                        <span class="project-number">04</span>
+                        <img src="image4.jpeg" alt="Custom Ecommerce CMS - PHP & MySQL Store">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Custom Ecommerce CMS</h3>
+                        <p class="project-desc">Complete ecommerce management platform built with PHP and MySQL. Features admin-controlled product management, real-time order tracking, inventory handling, customer management, and reporting dashboards.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Mateenahsan00/Custom_Ecommerce_Store" target="_blank" class="btn btn-outline">
+                                🔗 View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Anjileen Handcraft & Foods -->
+                <div class="project-card fade-in delay-5" data-category="wordpress ecommerce">
+                    <div class="project-preview">
+                        <span class="project-category-badge">WordPress</span>
+                        <span class="project-number">05</span>
+                        <img src="image5.jpeg" alt="Anjileen Handcraft & Foods - WooCommerce Store">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Anjileen Handcraft & Foods</h3>
+                        <p class="project-desc">WordPress and WooCommerce-based ecommerce website for handmade crochet items and organic food products. Managed complete product uploads, page creation, store layout customization, and payment gateway integration.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Ecommerce</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://anjileenhandcraftandfoods.com/" target="_blank" class="btn btn-primary">
+                                🌐 View Live Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Mines & Minerals World -->
+                <div class="project-card fade-in delay-6" data-category="wordpress">
+                    <div class="project-preview">
+                        <span class="project-category-badge">WordPress</span>
+                        <span class="project-number">06</span>
+                        <img src="image6.jpeg" alt="Mines & Minerals World - Business Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mines & Minerals World</h3>
+                        <p class="project-desc">WordPress-based professional business website for a minerals and gemstones company. Managed comprehensive website pages, custom content structure, layout customization, and SEO optimization setup.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Business</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://minesandmineralsworld.com/" target="_blank" class="btn btn-primary">
+                                🌐 View Live Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Sukoon Developments -->
+                <div class="project-card fade-in delay-7" data-category="wordpress">
+                    <div class="project-preview">
+                        <span class="project-category-badge">WordPress</span>
+                        <span class="project-number">07</span>
+                        <img src="Sukoon.jpg" alt="Sukoon Developments - Real Estate Company Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sukoon Developments</h3>
+                        <p class="project-desc">Designed and launched the official company website for Sukoon Developments (Est. 1998) — developer of Harbour One mixed-use project in Naval Anchorage, Islamabad Expressway. Built using WordPress and Elementor with a responsive, modern, and user-friendly interface. Managed complete website maintenance, security, backups, performance optimization, on-page SEO, and post-launch technical support.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Real Estate</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://sukoondevelopments.com/" target="_blank" class="btn btn-primary">
+                                🌐 View Live Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: The Floral Village -->
+                <div class="project-card fade-in delay-8" data-category="wordpress ecommerce">
+                    <div class="project-preview">
+                        <span class="project-category-badge">Ecommerce</span>
+                        <span class="project-number">08</span>
+                        <img src="Floral.jpg" alt="The Floral Village - WooCommerce Flower Shop">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">The Floral Village</h3>
+                        <p class="project-desc">Built and launched a responsive WooCommerce flower shop website for The Floral Village — the best flower shop in Islamabad and Rawalpindi. Features organized product categories, premium bouquets, imported flowers, acrylic gift boxes, same-day delivery service, payment-ready functionality, and on-page SEO. Collaborated with the client to successfully deliver the website within the contract timeline.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Ecommerce</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://thefloralvillage.com/" target="_blank" class="btn btn-primary">
+                                🌐 View Live Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2 class="fade-in">Have a Project in Mind?</h2>
+                <p class="fade-in delay-1">Let's collaborate to bring your ideas to life. Whether you need a custom web application, WordPress site, ecommerce store, or digital marketing solution — I'm here to deliver premium results.</p>
+                <div class="cta-buttons fade-in delay-2">
+                    <a href="contact.html" class="btn btn-primary">📧 Start a Project</a>
+                    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" class="btn btn-secondary">💬 Chat on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Mateen Portfolio</h4>
+                <p>Professional portfolio showcasing my work in IT, Web Development, Ecommerce, and Digital Marketing — delivering secure, user-friendly, and business-oriented digital solutions.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><p>📧 devolper.expert@gmail.com</p></li>
+                    <li><p>📱 +92 314 970 5607</p></li>
+                    <li><p>📍 Islamabad, Pakistan</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="footer-social-links">
+                    <a href="https://github.com/Mateenahsan00" target="_blank" class="social-icon-link" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22V23c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateenahsan00/" target="_blank" class="social-icon-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8 8H11.83V10.18H11.88C12.41 9.17 13.71 8.1 15.65 8.1C19.69 8.1 20.5 10.76 20.5 14.22V24H16.5V15.35C16.5 13.29 16.46 10.64 13.65 10.64C10.79 10.64 10.35 12.87 10.35 15.2V24H6.35V8H8Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mateen.devstudio" target="_blank" class="social-icon-link" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1EAs9AAeJW/" target="_blank" class="social-icon-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073C24 5.405 18.597 0 12 0S0 5.405 0 12.073C0 18.1 4.432 23.094 10.219 24V15.579H7.15V12.074h3.069V9.469c0-3.038 1.792-4.707 4.538-4.707 1.312 0 2.686.235 2.686.235v2.963h-1.514c-1.491 0-1.956.926-1.956 1.875v2.271h3.328l-.532 3.505h-2.796V24C19.568 23.094 24 18.1 24 12.073z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mateen Portfolio. All rights reserved. Crafted with precision and care.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+        };
+        navSlide();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('nav-active');
+                document.querySelector('.burger').classList.remove('toggle');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.project-card, .section-header, .project-stat-card, .filter-tabs').forEach(el => {
+            observer.observe(el);
+        });
+
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const projectCards = document.querySelectorAll('.project-card');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="whatsapp-float">
+        💬
+    </a>
+</body>
+</html>
