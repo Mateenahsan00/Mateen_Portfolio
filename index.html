@@ -22,7 +22,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="YOIP8YrMI9fGDaFRdxkUTUqib0SqGh9lcuSMXArTk8U" />  
-     <title>Mateen Portfolio - IT Professional & Web Developer</title>
+    <title>Mateen Portfolio - IT Professional & Web Developer</title>
+    <meta name="description" content="Muhammad Mateen Ahsan is an Islamabad-based Web Developer, Growth Marketing Manager and Meta Ads Specialist: WordPress, WooCommerce, Shopify, SEO, Meta Ads, AI content creation and ecommerce.">
+    <meta name="author" content="Muhammad Mateen Ahsan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#020617">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mateen Portfolio">
+    <meta property="og:title" content="Muhammad Mateen Ahsan | Web Developer & Meta Ads Specialist">
+    <meta property="og:description" content="Web Developer, Growth Marketing Manager and Meta Ads Specialist in Islamabad, Pakistan. WordPress, ecommerce, SEO, Meta Ads and AI content.">
+    <meta property="og:image" content="https://mateenportfolio-wheat.vercel.app/Mateen.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muhammad Mateen Ahsan | Web Developer & Meta Ads Specialist">
+    <meta name="twitter:description" content="Web Developer, Growth Marketing Manager and Meta Ads Specialist in Islamabad, Pakistan. WordPress, ecommerce, SEO, Meta Ads and AI content.">
+    <meta name="twitter:image" content="https://mateenportfolio-wheat.vercel.app/Mateen.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://mateenportfolio-wheat.vercel.app/#website",
+          "url": "https://mateenportfolio-wheat.vercel.app",
+          "name": "Mateen Portfolio",
+          "author": { "@id": "https://mateenportfolio-wheat.vercel.app/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://mateenportfolio-wheat.vercel.app/#person",
+          "name": "Muhammad Mateen Ahsan",
+          "jobTitle": "Web Developer, Growth Marketing Manager & Meta Ads Specialist",
+          "url": "https://mateenportfolio-wheat.vercel.app",
+          "image": "https://mateenportfolio-wheat.vercel.app/Mateen.png",
+          "email": "mailto:devolper.expert@gmail.com",
+          "telephone": "+923149705607",
+          "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
+          "worksFor": [
+            { "@type": "Organization", "name": "Construction Technology Training Institute", "url": "https://ctti.edu.pk/" },
+            { "@type": "Organization", "name": "Sukoon Developments", "url": "https://sukoondevelopments.com/" },
+            { "@type": "Organization", "name": "Anjileen Handcraft and Foods (Pvt.) Ltd", "url": "https://anjileenhandcraftandfoods.com/" }
+          ],
+          "knowsAbout": ["Web Development", "WordPress", "WooCommerce", "Shopify", "Meta Ads", "Google Ads", "SEO", "Ecommerce", "AI Video Generation", "AI Image Generation", "Social Media Management", "Graphic Design"],
+          "sameAs": [
+            "https://github.com/Mateenahsan00",
+            "https://www.linkedin.com/in/mateenahsan00/",
+            "https://www.instagram.com/mateen.devstudio",
+            "https://www.facebook.com/share/1EAs9AAeJW/"
+          ]
+        }
+      ]
+    }
+    </script>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -791,6 +841,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 0.95rem;
         }
 
+        /* Accessibility (added) */
+        .burger:focus-visible,
+        a:focus-visible {
+            outline: 2px solid var(--primary-accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Fix (added): .hero h1's gradientShift animation was overriding the
+           fade-in animation, leaving the name stuck at opacity 0. Run both. */
+        .hero h1.fade-in {
+            animation: fadeInUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, gradientShift 6s ease infinite;
+        }
+
         /* Tablet Responsive */
         @media screen and (max-width: 1200px) {
             .hero { padding: 170px 5% 90px; }
@@ -1031,9 +1103,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
  
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <a href="index.html" class="logo">Mateen Portfolio</a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-menu">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="skills.html">Skills</a></li>
@@ -1043,10 +1115,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="certifications.html">Certifications</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="nav-whatsapp">
+        <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener" class="nav-whatsapp" aria-label="Chat with Mateen on WhatsApp">
             💬 WhatsApp
         </a>
-        <div class="burger">
+        <div class="burger" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -1058,9 +1130,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="hero">
             <div class="hero-content">
                 <h1 class="fade-in" style="text-align: center;">Muhammad Mateen Ahsan</h1>
-                <p class="subtitle fade-in delay-1">IT Manager | Web Developer | WordPress Developer | Digital Marketing Specialist</p>
+                <p class="subtitle fade-in delay-1">Web Developer | Growth Marketing Manager | Meta Ads Specialist | WordPress Developer | Digital Marketing Specialist</p>
                 <p class="tagline fade-in delay-2">
-                    Results-driven IT professional with 2+ years of experience in Web Development, WordPress, Ecommerce, and Digital Marketing. I develop responsive websites, WooCommerce and Shopify stores, manage SEO, website maintenance, and digital marketing campaigns. Proficient in HTML, CSS, JavaScript, PHP, MySQL, Node.js, Express.js, and WordPress—focused on delivering secure, user-friendly, and business-oriented digital solutions.
+                    Results-driven IT professional with 2+ years of experience in Web Development, WordPress, Ecommerce, Digital Marketing, and Meta Ads. I develop responsive websites, WooCommerce and Shopify stores, manage SEO, website maintenance, Meta Ads and digital marketing campaigns, and create AI-generated images and videos for ad creatives. Proficient in HTML, CSS, JavaScript, PHP, MySQL, Node.js, Express.js, and WordPress—focused on delivering secure, user-friendly, and business-oriented digital solutions.
                 </p>
                 <div class="hero-buttons fade-in delay-3">
                     <a href="projects.html" class="btn btn-primary">🚀 View Projects</a>
@@ -1106,6 +1178,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="expertise-icon">🔧</span>
                     <h3>Technical Support</h3>
                     <p>Windows installation and configuration, VMware setup, comprehensive website maintenance, security hardening, backups management, troubleshooting, and reliable technical support services.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">📣</span>
+                    <h3>Meta Ads & Lead Generation</h3>
+                    <p>Planning, launching and optimizing Meta Ads campaigns — lead forms, WhatsApp/messaging and awareness — with Meta Pixel and conversion tracking, for real-estate projects, an educational institute and ecommerce brands.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">🎬</span>
+                    <h3>AI Content Creation</h3>
+                    <p>AI video generation, AI image generation and AI-generated ad creatives for campaigns, social media and project promotion — producing more creative variations faster for testing.</p>
+                </div>
+                <div class="card expertise-card">
+                    <span class="expertise-icon">📱</span>
+                    <h3>Social Media Management</h3>
+                    <p>Content planning, post design, publishing and audience engagement, with consistent branding, page optimization and performance tracking to drive social and digital growth.</p>
                 </div>
             </div>
         </section>
@@ -1181,6 +1268,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="icon">🐙</span>
                     <h4>Git & GitHub</h4>
                 </div>
+                <div class="skill-pill">
+                    <span class="icon">🎯</span>
+                    <h4>Google Ads</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">📍</span>
+                    <h4>Meta Pixel</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🎬</span>
+                    <h4>AI Video</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">🖌️</span>
+                    <h4>AI Images</h4>
+                </div>
+                <div class="skill-pill">
+                    <span class="icon">📱</span>
+                    <h4>Social Media</h4>
+                </div>
             </div>
         </section>
 
@@ -1188,30 +1295,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section id="experience-preview" class="experience-preview">
             <div class="section-header">
                 <h2>Experience Highlights</h2>
-                <p>Professional experience spanning IT management, web development, ecommerce, and digital marketing</p>
+                <p>Professional experience spanning IT management, web development, ecommerce, digital marketing, and Meta Ads</p>
             </div>
             <div class="exp-grid">
                 <div class="card">
+                    <span class="exp-date">Sep 2026 – Present</span>
+                    <div class="exp-company">Construction Technology Training Institute (CTTI) – Islamabad</div>
+                    <h3 class="exp-title">Assistant Coordinator & Social Media Manager</h3>
+                    <p class="exp-subtitle">On-site Role</p>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Coordinate institute activities, events and communication between management, faculty and students</li>
+                            <li>Designed and launched the institute's WordPress website with Divi, manage social media and run Meta Ads for outreach</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
                     <span class="exp-date">Aug 2024 – Present</span>
                     <div class="exp-company">Anjileen Handcraft and Foods (Pvt.) Ltd</div>
-                    <h3 class="exp-title">IT Manager & Web Developer</h3>
+                    <h3 class="exp-title">Web Developer & Growth Marketing Manager</h3>
                     <p class="exp-subtitle">Remote Role</p>
                     <div class="exp-desc">
                         <ul>
                             <li>Developed, maintained, and optimized company WordPress website with performance tuning, security, backups, and content updates</li>
                             <li>Managed SEO, ecommerce operations, digital marketing campaigns, social media, graphic design, and technical support</li>
+                            <li>Run Meta Ads campaigns to promote products, grow reach and drive online sales</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card">
-                    <span class="exp-date">Aug 2026 – Present</span>
+                    <span class="exp-date">May 2026 – Present</span>
                     <div class="exp-company">Sukoon Developments – Islamabad</div>
-                    <h3 class="exp-title">Web Developer</h3>
-                    <p class="exp-subtitle">Venue Anchorage, Islamabad</p>
+                    <h3 class="exp-title">Web Developer & Growth Marketing Manager</h3>
+                    <p class="exp-subtitle">Naval Anchorage, Islamabad · Hybrid Role</p>
                     <div class="exp-desc">
                         <ul>
                             <li>Designed and launched official company website with WordPress and Elementor — responsive, modern, and user-friendly interface</li>
                             <li>Managed website maintenance, security, backups, performance optimization, on-page SEO, and post-launch support</li>
+                            <li>Plan and optimize Meta Ads (lead generation, WhatsApp/messaging, awareness) with AI-generated image and video creatives</li>
                         </ul>
                     </div>
                 </div>
@@ -1230,27 +1351,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="card">
                     <span class="exp-date">Contract – 2 Months</span>
                     <div class="exp-company">Mines & Minerals World</div>
-                    <h3 class="exp-title">Web Developer (Contract)</h3>
+                    <h3 class="exp-title">Web Developer & Digital Marketing Specialist (Contract)</h3>
                     <p class="exp-subtitle">Full WooCommerce Ecommerce Build</p>
                     <div class="exp-desc">
                         <ul>
                             <li>Developed a complete WooCommerce ecommerce website with responsive pages, secure payment-ready integration, backups, and maintenance</li>
                             <li>Worked closely with client to deliver a professional online store perfectly aligned with business objectives</li>
+                            <li>Managed product marketing and digital sales activities to grow online visibility, reach and sales</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card">
                     <span class="exp-date">Contract – 1 Month</span>
                     <div class="exp-company">The Floral Village – Islamabad</div>
-                    <h3 class="exp-title">Ecommerce Web Developer</h3>
+                    <h3 class="exp-title">Ecommerce Web Developer & Digital Marketing Specialist</h3>
                     <p class="exp-subtitle">F-7, Islamabad</p>
                     <div class="exp-desc">
                         <ul>
                             <li>Built and launched a responsive WooCommerce flower shop with organized product categories, payment-ready functionality, and on-page SEO</li>
                             <li>Collaborated with client to successfully deliver the project within the tight contract timeline</li>
+                            <li>Managed Meta Ads, Google Ads and digital marketing campaigns to promote products and increase online sales</li>
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="hero-buttons" style="margin-top:44px;">
+                <a href="experience.html" class="btn btn-secondary">💼 View Full Experience</a>
             </div>
         </section>
 
@@ -1258,7 +1384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section id="cta" class="cta-section">
             <div class="cta-container">
                 <h2>Ready to Work Together?</h2>
-                <p>Let's collaborate on your next web development project, ecommerce store, digital marketing campaign, or IT support needs. I'm open to new opportunities, freelance work, and professional partnerships.</p>
+                <p>Let's collaborate on your next web development project, ecommerce store, Meta Ads or digital marketing campaign, or IT support needs. I'm open to new opportunities, freelance work, and professional partnerships.</p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary">🎨 View My Work</a>
                     <a href="contact.html" class="btn btn-secondary">📧 Contact Me</a>
@@ -1271,7 +1397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-container">
             <div class="footer-col">
                 <h4>Mateen Portfolio</h4>
-                <p>Professional portfolio showcasing IT Management, Web Development, WordPress, Ecommerce, and Digital Marketing expertise.</p>
+                <p>Professional portfolio showcasing IT Management, Web Development, WordPress, Ecommerce, Digital Marketing, Meta Ads and AI content creation expertise.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -1280,13 +1406,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="about.html">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Contact Info</h4>
                 <ul>
-                    <li><p>devolper.expert@gmail.com</p></li>
-                    <li><p>+92 314 970 5607</p></li>
+                    <li><p><a href="mailto:devolper.expert@gmail.com">devolper.expert@gmail.com</a></p></li>
+                    <li><p><a href="tel:+923149705607">+92 314 970 5607</a></p></li>
                     <li><p>Islamabad, Pakistan</p></li>
                     <li><p>Open to Relocation</p></li>
                 </ul>
@@ -1294,24 +1422,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-col">
                 <h4>Connect</h4>
                 <div class="footer-social-links">
-                    <a href="https://github.com/Mateenahsan00" target="_blank" class="social-icon-link" title="GitHub">
+                    <a href="https://github.com/Mateenahsan00" target="_blank" rel="noopener" class="social-icon-link" title="GitHub" aria-label="GitHub">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22V23c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" fill="currentColor"/>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/mateenahsan00/" target="_blank" class="social-icon-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/mateenahsan00/" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn" aria-label="LinkedIn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8 8H11.83V10.18H11.88C12.41 9.17 13.71 8.1 15.65 8.1C19.69 8.1 20.5 10.76 20.5 14.22V24H16.5V15.35C16.5 13.29 16.46 10.64 13.65 10.64C10.79 10.64 10.35 12.87 10.35 15.2V24H6.35V8H8Z" fill="currentColor"/>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/mateen.devstudio" target="_blank" class="social-icon-link" title="Instagram">
+                    <a href="https://www.instagram.com/mateen.devstudio" target="_blank" rel="noopener" class="social-icon-link" title="Instagram" aria-label="Instagram">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
                             <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
                             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
                         </svg>
                     </a>
-                    <a href="https://www.facebook.com/share/1EAs9AAeJW/" target="_blank" class="social-icon-link" title="Facebook">
+                    <a href="https://www.facebook.com/share/1EAs9AAeJW/" target="_blank" rel="noopener" class="social-icon-link" title="Facebook" aria-label="Facebook">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 12.073C24 5.405 18.597 0 12 0S0 5.405 0 12.073C0 18.1 4.432 23.094 10.219 24V15.579H7.15V12.074h3.069V9.469c0-3.038 1.792-4.707 4.538-4.707 1.312 0 2.686.235 2.686.235v2.963h-1.514c-1.491 0-1.956.926-1.956 1.875v2.271h3.328l-.532 3.505h-2.796V24C19.568 23.094 24 18.1 24 12.073z" fill="currentColor"/>
                         </svg>
@@ -1320,7 +1448,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Mateen Portfolio. All rights reserved.</p>
+            <p>&copy; <span id="year">2026</span> Mateen Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1328,27 +1456,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const navSlide = () => {
             const burger = document.querySelector('.burger');
             const nav = document.querySelector('.nav-links');
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('nav-active');
-                burger.classList.toggle('toggle');
+            const toggleMenu = () => {
+                const open = nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle', open);
+                burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+                burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            };
+            burger.addEventListener('click', toggleMenu);
+            burger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && nav.classList.contains('nav-active')) toggleMenu();
             });
         };
         navSlide();
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('nav-active');
-                document.querySelector('.burger').classList.remove('toggle');
+                const b = document.querySelector('.burger');
+                b.classList.remove('toggle');
+                b.setAttribute('aria-expanded', 'false');
+                b.setAttribute('aria-label', 'Open menu');
             });
         });
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
         const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -60px 0px' };
         const observer = new IntersectionObserver((entries) => {
@@ -1362,7 +1500,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             });
         }, observerOptions);
-        document.querySelectorAll('.card, .skill-pill, .section-header').forEach((el, i) => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduceMotion) document.querySelectorAll('.card, .skill-pill, .section-header').forEach((el, i) => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(40px) rotateX(5deg)';
             el.style.transition = 'opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1)';
@@ -1371,7 +1510,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
-                if (window.innerWidth < 992) return;
+                if (window.innerWidth < 992 || reduceMotion) return;
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
@@ -1388,7 +1527,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/923149705607?text=Hello%20Mateen%2C%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with Mateen on WhatsApp">
         💬
     </a>
 </body>
